@@ -303,3 +303,17 @@ header ion-icon {
 .projects img {
   border-radius: 35%;
 }
+
+/*----------------------------------------------------
+------------------------FOOTER-----------------------
+------------------------------------------------------*/
+
+footer {
+  background-color: #242424;
+}
+
+footer .caption {
+  color: #fff;
+  padding-left: 50%;
+  padding-bottom: 1.5%;
+}
