@@ -1,0 +1,305 @@
+/*-------------------------------------------------------
+-----------------------BASIC SETUP-----------------------
+---------------------------------------------------------*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* overflow: hidden; */
+}
+
+html {
+  background-color: #242424;
+  color: #fdfdfdcc;
+  font-family: "Montserrat", "Roboto", sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  text-rendering: optimizeLegibility;
+}
+
+/* .clearfix {zoom: 1} */
+.clearfix:after {
+  content: '';
+  clear: both;
+  display: block;
+  /* height: 0;
+  visibility: hidden; */
+}
+
+/*-----------------------------------------------------
+-----------------REUSABLE COMPONENETS------------------
+-------------------------------------------------------*/
+
+.section {
+  padding: 2% 0%;
+}
+
+.row {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+.box {
+  padding: 1%;
+}
+
+/*-----------------------HEADINGS-----------------------*/
+
+h2,
+h3 { 
+    text-transform: uppercase;
+}
+
+h1 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  color: #fdfdfde6;
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.3rem;
+  word-spacing: 2px;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  margin: 4% 0%;
+}
+
+h3{
+  font-size: 0.8rem;
+  margin-bottom: 15px;
+}
+
+/*-----------------------ANIMATIONS-----------------------*/
+
+.noanimation::after {
+  content: "";
+  display: none;
+  animation: none !important;
+}
+
+/* Cursor animation */
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+@keyframes glowIntoPage {
+  0%, 100% {
+    box-shadow: 0 0 22.5px rgba(255, 255, 255, 0.5); /* Initial glow effect */
+  }
+  50% {
+    box-shadow: 0 0 50px rgba(255, 255, 255, 0.7); /* Dimmer glow effect */
+  }
+}
+
+.slide-in-element {
+  opacity: 0;
+  transition: opacity 2s ease;
+}
+
+.slide-in {
+  opacity: 1;
+}
+
+/* Fade in effect on scroll */
+.fade-in {
+  opacity: 0;
+  transition: opacity 0.8s ease-in 1ms;
+}
+
+.fade-in.fade-in-element {
+  opacity: 1;
+}
+
+
+/*-----------------------PARAGRAPHS-----------------------*/
+
+.caption {
+  font-size: 0.8rem;
+  font-style: italic;
+  font-weight: 400;
+  display: block;
+  text-align: center;
+  justify-content: center;
+  position: absolute;
+  margin-top: 50px;
+  /* flex-direction: column; */
+}
+
+/*----------------------------------------------------
+-------------------------HEADER-----------------------
+------------------------------------------------------*/
+
+header {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+}
+
+header img{
+  display: block;
+  position: absolute;
+  top: 38vh;
+  left: 50%;
+  transform: translate(-50%, -100%);
+  width: 100px;
+  height: 100px;
+  border-radius: 13%;
+  animation: glowIntoPage 5s ease alternate-reverse 5ms;
+  box-shadow: 0 0 22.5px rgba(255, 255, 255, 0.6);
+}
+
+#big-typing,
+#typing-text {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  text-align: center;
+}
+
+#big-typing{
+  top: 43vh;
+  /* transform: translate(-50%, 150%); */
+  font-weight: 600;
+  font-size: 4vh;
+}
+
+#typing-text {
+  top: 47vh;
+  /* transform: translate(-50%, -35%); */
+  font-size: 2.5vh;
+  overflow: hidden;
+  line-height: 1.5;
+}
+
+#typing-text::after,
+#big-typing::after {
+  content: "_"; /* Cursor */
+  animation: blink 0.5s infinite;
+  padding-left: 0.1em;
+}
+
+.arrow-wrapper {
+  position: absolute;
+  bottom: 4.5vh;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.arrow-wrapper:hover {
+  cursor: pointer;
+}
+
+header ion-icon {
+  font-size: 50px;
+  --ionicon-stroke-width: 20px;
+  color: #fdfdfdab;
+}
+
+/*----------------------------------------------------
+------------------------SOCIALS-----------------------
+------------------------------------------------------*/
+
+.socials {
+  background-color: #1c1c1c;
+  height: 47vh;
+}
+
+.social-panel {
+  margin-top: 30px;
+  background-color: rgba(255, 255, 255, 0.9);
+  color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(255, 255, 255, 0.119);
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  text-align: center;
+  padding: 30px;
+  padding-bottom: 40px;
+  text-decoration: none;
+}
+
+.social-panel:hover {
+  transform: translateY(6px); /* Move the panel up on hover */
+}
+
+.social-panel h3 {
+  margin-top: 5px;
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.social-panel img,
+.social-panel ion-icon {
+  margin-right: 15px;
+}
+
+.social-panel img {
+  width: 40px;
+  height: 40px;
+}
+
+.social-panel ion-icon {
+  font-size: 40px;
+}
+
+.github {
+  background-color: #24292e;
+}
+
+.x {
+  /* background-color: #1da1f2; */
+  background-color: #000;
+}
+
+.discord {
+  background-color: #5865F2;
+}
+
+/*----------------------------------------------------
+------------------------FRIENDS-----------------------
+------------------------------------------------------*/
+
+.friends {
+  background-color: #131314ba;
+  height: 47vh;
+}
+
+.website {
+  background-color: #0984e3;
+}
+
+.quincetart10 {
+  background-color: #008b00;
+}
+
+.quincetart10:hover {
+  transform: translateY(-6px);
+}
+
+.creeperita104 {
+  background-color: #61298c;
+}
+
+/*----------------------------------------------------
+------------------------PROJECTS-----------------------
+------------------------------------------------------*/
+
+.projects {
+  background-color: #111112d3;
+  height: 47vh;
+}
+
+.projects .social-panel {
+  background-color: rgba(230, 116, 40, 0.758);
+}
+
+.projects img {
+  border-radius: 35%;
+}

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Carmelo Canavan's Profile</title>
+    <link rel="icon" href="./resources/img/pizza-pfp.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./vendors/css/grid.css">
+    <link rel="stylesheet" href="./vendors/css/normalize.css">
+    <link rel="stylesheet" href="./resources/css/style.css">
+  </head>
+  <body>
+    <header>
+        <img class="slide-in-element" src="./resources/img/pizza-pfp.png" alt="Carmelo Canavan's pfp">
+        <h1 id="big-typing">Hey there, my name is Carmelo Canavan.</h1>
+        <p id="typing-text">
+          <br>I'm a student who is fascinated by Robotics and AI, while dabbling in front-end web development.
+          <br>Check out my socials, friends' profiles, and successful projects below.
+          <br>If you're interested in collaborating or just want to chat, hit me up on Discord at ninja_5000.
+        </p>
+        <div class="arrow-wrapper slide-in-element" onclick="document.querySelector('.socials').scrollIntoView({ behavior: 'smooth' });">
+          <ion-icon name="chevron-down"></ion-icon>
+        </div>
+    </header>
+
+    <section class="socials box">
+      <div class="fade-in row">
+        <h2 class="fade-in">Socials</h2>
+      </div>
+      <div class="fade-in row">
+        <a href="http://discord.gg/u7dqJf88SX" target="_blank" class="fade-in col span-1-of-3 social-panel discord">
+          <img src=./resources/img/discord-mark-white.svg target="_blank" alt="Discord logo">
+          <!-- <ion-icon name="logo-discord"></ion-icon> -->
+          <h3>Discord</h3>
+          <p class="caption">ninja_5000#0</p>
+        </a>
+        <a href="https://github.com/Ninja-5000" target="_blank" class="fade-in col span-1-of-3 social-panel github">
+          <ion-icon name="logo-github"></ion-icon>
+          <!-- <img src="./resources/img/github-mark-white.svg" alt="GitHub logo"> -->
+          <h3>GitHub</h3>
+          <p class="caption">Ninja-5000</p>
+        </a>
+        <a href="https://twitter.com/CarmeloCan745" target="_blank" class="fade-in col span-1-of-3 social-panel x">
+          <img src="./resources/img/x-logo.svg" alt="X logo">
+          <!-- <h3>𝕏</h3> -->
+          <p class="caption">@CarmeloCan745</p>
+        </a>
+      </div>
+    </section>
+
+    <section class="friends box">
+      <div class="fade-in row">
+        <h2 class="fade-in">Friends</h2>
+      </div>
+      <div class="fade-in row">
+        <a href="https://stefdp.is-a.dev/" target="_blank" class="fade-in col span-1-of-3 social-panel website">
+          <ion-icon name="globe-outline"></ion-icon>
+          <h3>Stef</h3>
+          <p class="caption">Kilometer per Second</p>
+        </a>
+        <a href="https://quincetart10.is-a.dev" target="_blank" class="fade-in col span-1-of-3 social-panel website quincetart10">
+          <ion-icon name="globe-outline"></ion-icon>
+          <h3>quincetart10</h3>
+          <p class="caption">"Roblox AI"</p>
+        </a>
+        <a href="https://creeperita104.is-a.dev" target="_blank" class="fade-in col span-1-of-3 social-panel website creeperita104">
+          <ion-icon name="globe-outline"></ion-icon>
+          <h3>CreeperITA104</h3>
+          <p class="caption">Idiota Professionale</p>
+        </a>
+      </div>
+    </section>
+
+    <section class="projects box">
+      <div class="fade-in row">
+        <h2 class="fade-in">Projects</h2>
+      </div>
+      <div class="fade-in row">
+        <a href="#" class="fade-in col span-1-of-2 social-panel website">
+          <ion-icon name="globe-outline"></ion-icon>
+          <h3>My Web Profile</h3>
+          <p class="caption">What you're seeing right now</p>
+        </a>
+      
+        <a href="https://discord.com/oauth2/authorize?client_id=975365560298795008" target="_blank" class="fade-in col span-1-of-2 social-panel website">
+          <img src="./resources/img/nav-pfp.png">
+          <h3>N.A.V.I.A.C</h3>
+          <p class="caption">A multimodal Discord AI chatbot</p>
+        </a>
+      </div>
+    </section>
+
+    <footer>
+      <p>&copy; 2024 ninja_5000. All rights reserved.</p>
+      
+    </footer>
+
+     <script src="./resources/js/script.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  </body>
+</html>
