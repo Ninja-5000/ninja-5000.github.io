@@ -16,11 +16,27 @@
     <header>
         <img class="slide-in-element" src="./resources/img/pizza-pfp.png" alt="Carmelo Canavan's pfp">
         <h1 id="big-typing">Hey there, my name is Carmelo Canavan.</h1>
-        <p id="typing-text">
-          <br>I'm a student who is fascinated by Robotics and AI, while dabbling in front-end web development.
-          <br>Check out my socials, friends' profiles, and successful projects below.
-          <br>If you're interested in collaborating or just want to chat, hit me up on Discord at ninja_5000.
-        </p>
+        <p id="typing-text"></p>
+          <script>
+            // Function to adjust content based on screen width
+            function adjustContent() {
+                const screenWidth = window.innerWidth;
+                const contentDiv = document.getElementById('content');
+    
+                if (screenWidth < 768) {
+                    document.getElementById('typing-text').innerHTML = '<br>I\'m a student who is fascinated by Robotics and AI, while dabbling in front-end web development.<br><br>Check out my socials, friends\' profiles, and successful projects below.<br><br>If you\'re interested in collaborating or just want to chat, hit me up on Discord at ninja_5000.';
+                } else {
+                    document.getElementById('typing-text').innerHTML = '<br>I\'m a student who is fascinated by Robotics and AI, while dabbling in front-end web development.<br>Check out my socials, friends\' profiles, and successful projects below.<br>If you\'re interested in collaborating or just want to chat, hit me up on Discord at ninja_5000.';
+                }
+            }
+    
+            // Call the function initially
+            adjustContent();
+    
+            // Add event listener for window resize
+            window.addEventListener('resize', adjustContent);
+          </script>
+    
         <div class="arrow-wrapper slide-in-element" onclick="document.querySelector('.socials').scrollIntoView({ behavior: 'smooth' });">
           <ion-icon name="chevron-down"></ion-icon>
         </div>

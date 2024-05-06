@@ -148,7 +148,7 @@ header img{
   width: 100px;
   height: 100px;
   border-radius: 13%;
-  animation: glowIntoPage 5s ease alternate-reverse 5ms;
+  animation: glowIntoPage 6s ease alternate-reverse;
   box-shadow: 0 0 22.5px rgba(255, 255, 255, 0.6);
 }
 
@@ -332,21 +332,20 @@ footer .caption{
   header img {
     position: static;
     top: 50%;
-    transform: translate(118%, 50%);
+    transform: translate(105%, 50%);
     width: 150px;
     height: 150px;
     border-radius: 10%;
     animation: glowIntoPage 5s ease alternate-reverse 5ms;
     box-shadow: 0 0 30px rgba(255, 255, 255, 0.6);
-    width: 140px;
-    height: 140px;
+    width: 130px;
+    height: 130px;
   }
 
   #big-typing,
   #typing-text {
     position: static;
     margin: 0;
-    text-align: left;
     margin-left: 50vw;
     margin-bottom: 50vh;
     white-space: pre-wrap;
@@ -354,19 +353,17 @@ footer .caption{
   }
 
   #big-typing {
+    font-size: 3.5vh;
     margin: 0;
     margin-left: 50vw;
-    margin-top: 15vh;
+    margin-top: 13vh;
   }
 
   #typing-text {
+    font-size: 2.5vh;
     margin-bottom: 50px;
     margin-top: 0px;
     padding-bottom: 50px;
-  }
-
-  .arrow-wrapper {
-    margin-top: 50px;
   }
 
   .socials, .friends {
