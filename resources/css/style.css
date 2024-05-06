@@ -311,9 +311,84 @@ header ion-icon {
 footer {
   background-color: #242424;
 }
-
-footer .caption {
+footer .caption{
   color: #fff;
   padding-left: 50%;
   padding-bottom: 1.5%;
+}
+
+/*----------------------------------------------------
+------------------------MEDIA QUERIES-----------------------
+------------------------------------------------------*/
+
+@media only screen and (max-width: 768px) {
+  header {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    z-index: 1000;
+  }
+
+  header img {
+    position: static;
+    top: 50%;
+    transform: translate(118%, 50%);
+    width: 150px;
+    height: 150px;
+    border-radius: 10%;
+    animation: glowIntoPage 5s ease alternate-reverse 5ms;
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.6);
+    width: 140px;
+    height: 140px;
+  }
+
+  #big-typing,
+  #typing-text {
+    position: static;
+    margin: 0;
+    text-align: left;
+    margin-left: 50vw;
+    margin-bottom: 50vh;
+    white-space: pre-wrap;
+    width: 85vw;
+  }
+
+  #big-typing {
+    margin: 0;
+    margin-left: 50vw;
+    margin-top: 15vh;
+  }
+
+  #typing-text {
+    margin-bottom: 50px;
+    margin-top: 0px;
+    padding-bottom: 50px;
+  }
+
+  .arrow-wrapper {
+    margin-top: 50px;
+  }
+
+  .socials, .friends {
+    height: 75vh;
+  }
+
+  .projects {
+    height: 65vh;
+  }
+
+  .social-panel {
+    margin: 0;
+    margin-top: 30px;
+    margin-left: 10px;
+    padding-bottom: 50px;
+  }
+
+  .social-panel:first-child {
+    margin-left: 10px;
+  }
+
+  .span-1-of-3, .span-1-of-2 {
+    width: 95%;
+  }
 }
