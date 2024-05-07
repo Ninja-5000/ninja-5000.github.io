@@ -329,7 +329,7 @@ footer .caption {
 
 @media only screen and (max-width: 768px) {
   header::before {
-    content: "Please note that this page is not yet fully responsive with most screen sizes.";
+    content: "Please note that this page isn't fully responsive on this screen yet.";
     font-weight: 400;
     position: absolute;
     background-color: #fecdac;
