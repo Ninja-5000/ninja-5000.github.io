@@ -144,9 +144,9 @@ header img{
   position: absolute;
   top: 38vh;
   left: 50%;
-  transform: translate(-50%, -100%);
-  width: 100px;
-  height: 100px;
+  transform: translate(-55%, -100%);
+  width: 120px;
+  height: 120px;
   border-radius: 13%;
   animation: glowIntoPage 6s ease alternate-reverse;
   box-shadow: 0 0 22.5px rgba(255, 255, 255, 0.6);
@@ -165,13 +165,13 @@ header img{
   top: 43vh;
   /* transform: translate(-50%, 150%); */
   font-weight: 600;
-  font-size: 4vh;
+  font-size: 4.2vh;
 }
 
 #typing-text {
   top: 47vh;
   /* transform: translate(-50%, -35%); */
-  font-size: 2.5vh;
+  font-size: 2.6vh;
   overflow: hidden;
   line-height: 1.5;
 }
@@ -226,7 +226,7 @@ header ion-icon {
 }
 
 .social-panel:hover {
-  transform: translateY(6px); /* Move the panel up on hover */
+  transform: translateY(6px);
 }
 
 .social-panel h3 {
@@ -254,7 +254,6 @@ header ion-icon {
 }
 
 .x {
-  /* background-color: #1da1f2; */
   background-color: #000;
 }
 
@@ -269,6 +268,7 @@ header ion-icon {
 .friends {
   background-color: #131314ba;
   height: 47vh;
+  /* padding-bottom: 20vh; */
 }
 
 .website {
@@ -279,12 +279,12 @@ header ion-icon {
   background-color: #008b00;
 }
 
-.quincetart10:hover {
-  transform: translateY(-6px);
-}
-
 .creeperita104 {
   background-color: #61298c;
+}
+
+.eryquicc {
+  background-color: #24282c;
 }
 
 /*----------------------------------------------------
@@ -311,9 +311,10 @@ header ion-icon {
 footer {
   background-color: #242424;
 }
-footer .caption{
+
+footer .caption {
   color: #fff;
-  padding-left: 50%;
+  padding-left: 45%;
   padding-bottom: 1.5%;
 }
 
@@ -366,12 +367,24 @@ footer .caption{
     padding-bottom: 50px;
   }
 
-  .socials, .friends {
-    height: 75vh;
+  .socials {
+    height: 70vh;
+  }
+
+  .socials::before, .friends::before, .projects::before {
+    content: "";
+    display: block;
+    padding: 0.5px;
+    background-color: #c2c2c210;
+    box-shadow: 0 0 3px rgba(255, 255, 255, 0.6);
+  }
+  
+  .friends {
+    height: 85vh;
   }
 
   .projects {
-    height: 65vh;
+    height: 55vh;
   }
 
   .social-panel {
@@ -385,7 +398,11 @@ footer .caption{
     margin-left: 10px;
   }
 
-  .span-1-of-3, .span-1-of-2 {
+  .span-1-of-3, .span-1-of-2, .span-1-of-4 {
     width: 95%;
+  }
+
+  footer .caption {
+    padding-left: 32%;
   }
 }
