@@ -79,6 +79,11 @@ h3{
   animation: none !important;
 }
 
+.paused {
+  animation-play-state: paused !important;
+}
+
+
 /* Cursor animation */
 @keyframes blink {
   50% {
@@ -323,6 +328,15 @@ footer .caption {
 ------------------------------------------------------*/
 
 @media only screen and (max-width: 768px) {
+  header::before {
+    content: "Please note that this page is not yet fully responsive with most screen sizes.";
+    font-weight: 400;
+    position: absolute;
+    background-color: #fecdac;
+    color: #000;
+    height: 50px;
+  }
+
   header {
     position: relative;
     width: 100%;
@@ -371,14 +385,6 @@ footer .caption {
     height: 70vh;
   }
 
-  .socials::before, .friends::before, .projects::before {
-    content: "";
-    display: block;
-    padding: 0.5px;
-    background-color: #c2c2c210;
-    box-shadow: 0 0 3px rgba(255, 255, 255, 0.6);
-  }
-  
   .friends {
     height: 85vh;
   }
