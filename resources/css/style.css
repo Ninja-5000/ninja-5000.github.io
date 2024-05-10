@@ -211,7 +211,20 @@ header ion-icon {
 
 .socials {
   background-color: #1c1c1c;
-  height: 47vh;
+  height: 48vh;
+}
+
+.badges {
+  text-align: center;
+}
+
+.badges img {
+  margin: 1vh 5vh 1vh 0vh;
+  transform: scale(1.1);
+}
+
+.badges:last-child {
+  margin-right: 0;
 }
 
 .social-panel {
