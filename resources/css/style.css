@@ -112,7 +112,7 @@ h3{
 /* Fade in effect on scroll */
 .fade-in {
   opacity: 0;
-  transition: opacity 0.8s ease-in 1ms;
+  transition: opacity 0.5s ease-in 1ms;
 }
 
 .fade-in.fade-in-element {
@@ -277,6 +277,18 @@ header ion-icon {
 
 .discord {
   background-color: #5865F2;
+}
+
+.mastodon {
+  background-color: #17063B;
+}
+
+.mastodon img {
+  width: 140px;
+}
+
+.mastodon-caption {
+  font-size: 0.7rem;
 }
 
 /*----------------------------------------------------
