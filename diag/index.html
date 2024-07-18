@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DiAG Guru - AI-Powered Learning Platform</title>
+    <link rel="stylesheet" href="./vendors/css/grid.css" />
+    <link rel="stylesheet" href="./vendors/css/normalize.css" />
+    <link rel="stylesheet" href="./resources/css/style.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="container navbar-content">
+        <div class="logo" id="logoLink">
+          <!-- <img
+            src="./resources/img/diag-logo.webp"
+            alt="DiAG Guru Logo"
+            id="homeLink"
+            class="logo"
+          /> -->
+          DiAG Guru
+        </div>
+        <div class="nav-links">
+          <span class="coins" id="coinDisplay">
+            Coins: <span id="coinCount">0</span>🪙
+          </span>
+          <a href="#" id="homeLink">Home</a>
+          <a href="#" id="profileLink">Profile</a>
+          <a href="#" id="logoutLink">Logout</a>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div id="loginPage" class="page active">
+        <h1>Welcome to DiAG Guru</h1>
+        <div class="auth-form">
+          <input type="text" placeholder="Username" id="username" />
+          <input type="password" placeholder="Password" id="password" />
+          <button id="loginButton">Login / Sign Up</button>
+        </div>
+      </div>
+
+      <div id="promptPage" class="page">
+        <h1>Begin your Learning Journey</h1>
+        <div class="prompt-box">
+          <textarea
+            id="promptInput"
+            rows="4"
+            placeholder="What do you want to learn today?"
+          ></textarea>
+          <button id="submitPrompt">Submit</button>
+        </div>
+        <h2>Examples:</h2>
+        <div class="examples">
+          <div class="example">Learn Python basics</div>
+          <div class="example">Understand machine learning concepts</div>
+          <div class="example">Master web development</div>
+        </div>
+      </div>
+
+      <div id="loadingPage" class="loading-page">
+        <div class="loading-image" id="loadingShape"></div>
+        <div class="loading-container" id="loadingText"></div>
+      </div>
+
+      <!-- <div class="loading-page">
+          <svg class="loading-image" viewBox="0 0 100 100">
+            <path
+              d="M50 15A35 35 0 1 0 74.787 25.213"
+              fill="none"
+              stroke="#4a90e2"
+              stroke-width="12"
+            >
+              <animate
+                attributeName="stroke-dasharray"
+                values="0 100;100 100"
+                dur="2s"
+                repeatCount="indefinite"
+              />
+            </path>
+          </svg>
+          <p id="loadingText" class="loading-text"></p>
+        </div> -->
+
+      <div id="boxesPage" class="page">
+        <h1>Your Learning Path</h1>
+        <div id="boxesContainer" class="boxes">
+          <!-- Boxes will be dynamically added here -->
+        </div>
+      </div>
+
+      <div id="contentPage" class="page">
+        <h1 id="contentTitle"></h1>
+        <div id="contentBox" class="content-box"></div>
+        <div class="question-panel">
+          <h2>Ask a Question to DiAG AI</h2>
+          <div id="chatContainer" class="chat-container"></div>
+          <div class="chat-input">
+            <textarea
+              id="questionInput"
+              rows="2"
+              placeholder="Type your question here..."
+            ></textarea>
+            <button id="askQuestion">Ask</button>
+          </div>
+        </div>
+        <button id="completeButton" class="complete-button">
+          Mark as Completed
+        </button>
+      </div>
+    </div>
+
+    <!-- </div>
+          <textarea
+            id="questionInput"
+            rows="4"
+            placeholder="Type your question here..."
+          ></textarea>
+          <button id="askQuestion">Ask</button>
+        </div> -->
+
+    <script src="./resources/js/bundle.js"></script>
+  </body>
+</html>
