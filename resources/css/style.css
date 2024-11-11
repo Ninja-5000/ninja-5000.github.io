@@ -44,6 +44,28 @@ html {
   padding: 1%;
 }
 
+.cursor {
+  pointer-events: none;
+  position: fixed;
+  display: block;
+  border-radius: 0;
+  mix-blend-mode:color-dodge;
+  color: #000;
+  top: 0;
+  left: 0;
+  z-index: 9999999999999999;
+}
+
+.circle {
+  position: absolute;
+  display: block;
+  width: 26px;
+  height: 26px;
+  border-radius: 20px;
+  background-color: #000;
+}
+
+
 /*-----------------------HEADINGS-----------------------*/
 
 h2,
@@ -323,15 +345,17 @@ header ion-icon {
 
 .projects {
   background-color: #111112d3;
-  height: 47vh;
+  height: 62vh;
 }
 
 .projects .social-panel {
   background-color: rgba(230, 116, 40, 0.758);
+  padding-bottom: 60px;
+  padding-right: 2px;
 }
 
 .projects img {
-  border-radius: 35%;
+  border-radius: 50%;
 }
 
 /*----------------------------------------------------
