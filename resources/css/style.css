@@ -39,10 +39,12 @@ html {
 .row {
   max-width: 1140px;
   margin: 0 auto;
+  position:sticky;
 }
 
 .box {
   padding: 1%;
+  /* margin-bottom: 1%; */
 }
 
 .cursor {
