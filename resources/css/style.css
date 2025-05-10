@@ -52,8 +52,7 @@ html {
   position: fixed;
   display: block;
   border-radius: 0;
-  mix-blend-mode:color-dodge;
-  color: #000;
+  color: #fff;
   top: 0;
   left: 0;
   z-index: 9999999999999999;
@@ -64,8 +63,9 @@ html {
   display: block;
   width: 26px;
   height: 26px;
-  border-radius: 20px;
-  background-color: #000;
+  border-radius: 50%;
+  background-color: #fff;
+  transition: width 0.2s, height 0.2s;
 }
 
 

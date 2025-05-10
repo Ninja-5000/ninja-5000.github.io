@@ -64,7 +64,6 @@ const cursor = document.querySelector(".cursor");
 circles.forEach(function (circle, index) {
   circle.x = 0;
   circle.y = 0;
-  circle.style.backgroundColor = "white";
 });
 
 window.addEventListener("mousemove", function (e) {
