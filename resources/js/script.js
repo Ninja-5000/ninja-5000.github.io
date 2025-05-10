@@ -54,45 +54,82 @@ document.addEventListener("DOMContentLoaded", () => {
 
     window.addEventListener('scroll', fadeInCheck);
     fadeInCheck(); // Trigger the check when the page loads
+
+    // Loader
+    const loader = document.getElementById("loader-overlay");
+    if (loader) {
+        setTimeout(() => {
+            loader.classList.add("split");
+            setTimeout(() => {
+                loader.classList.add("hide");
+                setTimeout(() => loader.remove(), 600);
+            }, 700);
+        }, 120); // Loader visible for 120ms
+    }
 });
+
+function isTouchDevice() {
+    return (
+        'ontouchstart' in window ||
+        navigator.maxTouchPoints > 0 ||
+        window.matchMedia('(hover: none) and (pointer: coarse)').matches
+    );
+}
 
 const coords = { x: 0, y: 0 };
 const circles = document.querySelectorAll(".circle");
 
 const cursor = document.querySelector(".cursor");
 
-circles.forEach(function (circle, index) {
-  circle.x = 0;
-  circle.y = 0;
-});
+if (!isTouchDevice()) {
+    circles.forEach(function (circle, index) {
+        circle.x = 0;
+        circle.y = 0;
+    });
 
-window.addEventListener("mousemove", function (e) {
-  coords.x = e.clientX;
-  coords.y = e.clientY;
-});
+    window.addEventListener("mousemove", function (e) {
+        coords.x = e.clientX;
+        coords.y = e.clientY;
+    });
 
-function animateCircles() {
-  let x = coords.x;
-  let y = coords.y;
+    function animateCircles() {
+        let x = coords.x;
+        let y = coords.y;
 
-  cursor.style.top = x;
-  cursor.style.left = y;
+        cursor.style.top = x;
+        cursor.style.left = y;
 
-  circles.forEach(function (circle, index) {
-    circle.style.left = x - 12 + "px";
-    circle.style.top = y - 12 + "px";
+        circles.forEach(function (circle, index) {
+            circle.style.left = x - 12 + "px";
+            circle.style.top = y - 12 + "px";
 
-    circle.style.scale = (circles.length - index) / circles.length;
+            circle.style.scale = (circles.length - index) / circles.length;
 
-    circle.x = x;
-    circle.y = y;
+            circle.x = x;
+            circle.y = y;
 
-    const nextCircle = circles[index + 1] || circles[0];
-    x += (nextCircle.x - x) * 0.3;
-    y += (nextCircle.y - y) * 0.3;
-  });
+            const nextCircle = circles[index + 1] || circles[0];
+            x += (nextCircle.x - x) * 0.3;
+            y += (nextCircle.y - y) * 0.3;
+        });
 
-  requestAnimationFrame(animateCircles);
+        requestAnimationFrame(animateCircles);
+    }
+
+    animateCircles();
+
+    // Grow on hover for clickable elements
+    const growSelectors = [
+        'button', 'a', '.arrow-wrapper', '.social-panel'
+    ];
+    growSelectors.forEach(sel => {
+        document.querySelectorAll(sel).forEach(el => {
+            circles.forEach(circle => {
+                el.addEventListener('mouseenter', () => circle.classList.add('grow'));
+                el.addEventListener('mouseleave', () => circle.classList.remove('grow'));
+            });
+        });
+    });
+} else {
+    if (cursor) cursor.style.display = 'none';
 }
-
-animateCircles();

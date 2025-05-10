@@ -17,7 +17,14 @@
     <link rel="stylesheet" href="./resources/css/style.css">
   </head>
   <body>
-    <header>
+    <div id="loader-overlay">
+      <div class="loader-half loader-top"></div>
+      <div class="loader-half loader-bottom"></div>
+    </div>
+
+
+    <main class="main-content">
+      <header>
         <div class="pizza-container slide-in-element">
           <img class="slide-in-element" src="./resources/img/pizza-pfp.webp" alt="Carmelo Canavan's pfp">
         </div>
@@ -28,141 +35,142 @@
             function adjustContent() {
                 const screenWidth = window.innerWidth;
                 const contentDiv = document.getElementById('content');
-    
+
                 if (screenWidth < 768) {
                     document.getElementById('typing-text').innerHTML = '<br>I\'m a student who is fascinated by Robotics and AI, while dabbling in front-end web development.<br><br>Check out my socials, friends\' profiles, and successful projects below.<br><br>If you\'re interested in collaborating or just want to chat, hit me up on Discord at ninja_5000.';
                 } else {
                     document.getElementById('typing-text').innerHTML = '<br>I\'m a student who is fascinated by Robotics and AI, while dabbling in front-end web development.<br>Check out my socials, friends\' profiles, and successful projects below.<br>If you\'re interested in collaborating or just want to chat, hit me up on Discord at ninja_5000.';
                 }
             }
-    
+
             adjustContent();
     
             window.addEventListener('resize', adjustContent);
           </script>
-    
+
         <div class="arrow-wrapper slide-in-element" onclick="document.querySelector('.socials').scrollIntoView({ behavior: 'smooth' });">
           <ion-icon name="chevron-down-outline"></ion-icon>
         </div>
-    </header>
+      </header>
 
-    <div class="cursor">
-  
-      <div class="circle"></div>
-      <div class="circle"></div>
-      <div class="circle"></div>
-      <div class="circle"></div>
-      <div class="circle"></div>
-      <div class="circle"></div>
-      <div class="circle"></div>
-      <div class="circle"></div>
-      <div class="circle"></div>
-      <div class="circle"></div>
-      <div class="circle"></div>
-      <div class="circle"></div> 
-      <div class="circle"></div>
-      <div class="circle"></div>
-      <div class="circle"></div>
-      <div class="circle"></div>
-      <div class="circle"></div>
-    </div>
+      <div class="cursor">
 
-    <section class="socials box">
-      <div class="fade-in row">
-        <h2 class="fade-in">Socials</h2>
-      </div>
-      <div class="fade-in row badges">
-        <img src="https://api.statusbadges.me/badge/status/707170199861854209?style=for-the-badge" alt="status">
-        <img src="https://api.statusbadges.me/badge/vscode/707170199861854209?style=for-the-badge" alt="vscode">
-        <img src="https://api.statusbadges.me/badge/playing/707170199861854209?style=for-the-badge" alt="playing">
-        <a href="https://api.statusbadges.me/openspotify/707170199861854209" target="_blank" rel="noopener"><img src="https://api.statusbadges.me/badge/spotify/707170199861854209?style=for-the-badge" alt="spotify"></a>
-      </div>
-      <div class="fade-in row">
-        <a href="http://discord.gg/u7dqJf88SX" target="_blank" class="fade-in col span-1-of-4 social-panel discord">
-          <img src=./resources/img/discord-mark-white.svg target="_blank" alt="Discord logo">
-          <h3>Discord</h3>
-          <p class="caption">ninja_5000#0</p>
-        </a>
-        <a href="https://github.com/Ninja-5000" target="_blank" class="fade-in col span-1-of-4 social-panel github">
-          <img src="./resources/img/github-mark-white.svg" alt="GitHub logo">
-          <h3>GitHub</h3>
-          <p class="caption">Ninja-5000</p>
-        </a>
-        <a href="https://twitter.com/CarmeloCan745" target="_blank" class="fade-in col span-1-of-4 social-panel x">
-          <img src="./resources/img/x-logo.svg" alt="X logo">
-          <p class="caption">@CarmeloCan745</p>
-        </a>
-        <a rel="me" href="https://mastodon.social/@ninja_5000" target="_blank" class="fade-in col span-1-of-4 social-panel mastodon">
-          <img src="./resources/img/mastodon-white-text.svg" alt="Mastodon logo">
-          <p class="mastodon-caption caption">@ninja_5000@mastodon.social</p>
-        </a>
-      </div>
-    </section>
-
-    <section class="friends box">
-      <div class="fade-in row">
-        <h2 class="fade-in">Friends</h2>
-      </div>
-      <div class="fade-in row">
-        <a href="https://stefdp.is-a.dev/" target="_blank" class="fade-in col span-1-of-4 social-panel website">
-          <ion-icon name="globe-outline"></ion-icon>
-          <h3>Stef</h3>
-          <p class="caption">Kilometer per Second</p>
-        </a>
-        <a href="https://user0.is-a.dev/" target="_blank" class="fade-in col span-1-of-4 social-panel website user0">
-          <ion-icon name="globe-outline"></ion-icon>
-          <h3>user0</h3>
-          <p class="caption">cnout poc</p>
-        </a>
-        <a href="https://eryquicc.is-a.dev/" target="_blank" class="fade-in col span-1-of-4 social-panel website eryquicc">
-          <ion-icon name="globe-outline"></ion-icon>
-          <h3>Eryquicc</h3>
-          <p class="caption">BLAKMAN doorman</p>
-        </a>
-        <a href="https://creeperita104.is-a.dev/" target="_blank" class="fade-in col span-1-of-4 social-panel website creeperita104">
-          <ion-icon name="globe-outline"></ion-icon>
-          <h3>CreeperITA104</h3>
-          <p class="caption">Idiota Professionale</p>
-        </a>
-      </div>
-    </section>
-
-    <section class="projects box">
-      <div class="fade-in row">
-        <h2 class="fade-in">Showcase</h2>
-      </div>
-      <div class="fade-in row">
-        <a href="#" class="fade-in col span-1-of-2 social-panel website">
-          <ion-icon name="globe-outline"></ion-icon>
-          <h3>My Web Profile</h3>
-          <p class="caption">What you're seeing right now</p>
-        </a>
-
-        <a href="https://discord.com/oauth2/authorize?client_id=946021874339565598" target="_blank" class="fade-in col span-1-of-2 social-panel website">
-          <img src="./resources/img/joshua-pfp.webp" alt="Joshua's pfp">
-          <h3>Joshua from TWEWY</h3>
-          <p class="caption">(2022) A weak AI, fine-tuned on<br>Microsoft's DialoGPT-medium</p>
-        </a>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div> 
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
       </div>
 
-      <div class="fade-in row">
-        <a href="https://discord.com/oauth2/authorize?client_id=975365560298795008" target="_blank" class="fade-in col span-1-of-2 social-panel website">
-          <img src="./resources/img/nav-pfp.webp" alt="NAVIAC's pfp">
-          <h3>N.A.V.I.A.C.</h3>
-          <p class="caption">A sophisticated Discord AI chatbot,<br>with a strong, witty personality</p>
-        </a>
+      <section class="socials box">
+        <div class="fade-in row">
+          <h2 class="fade-in">Socials</h2>
+        </div>
+        <div class="fade-in row badges">
+          <img src="https://api.statusbadges.me/badge/status/707170199861854209?style=for-the-badge" alt="status">
+          <img src="https://api.statusbadges.me/badge/vscode/707170199861854209?style=for-the-badge" alt="vscode">
+          <img src="https://api.statusbadges.me/badge/playing/707170199861854209?style=for-the-badge" alt="playing">
+          <a href="https://api.statusbadges.me/openspotify/707170199861854209" target="_blank" rel="noopener"><img src="https://api.statusbadges.me/badge/spotify/707170199861854209?style=for-the-badge" alt="spotify"></a>
+        </div>
+        <div class="fade-in row">
+          <a href="http://discord.gg/u7dqJf88SX" target="_blank" class="fade-in col span-1-of-4 social-panel discord">
+            <img src=./resources/img/discord-mark-white.svg target="_blank" alt="Discord logo">
+            <h3>Discord</h3>
+            <p class="caption">ninja_5000#0</p>
+          </a>
+          <a href="https://github.com/Ninja-5000" target="_blank" class="fade-in col span-1-of-4 social-panel github">
+            <img src="./resources/img/github-mark-white.svg" alt="GitHub logo">
+            <h3>GitHub</h3>
+            <p class="caption">Ninja-5000</p>
+          </a>
+          <a href="https://twitter.com/CarmeloCan745" target="_blank" class="fade-in col span-1-of-4 social-panel x">
+            <img src="./resources/img/x-logo.svg" alt="X logo">
+            <p class="caption">@CarmeloCan745</p>
+          </a>
+          <a rel="me" href="https://mastodon.social/@ninja_5000" target="_blank" class="fade-in col span-1-of-4 social-panel mastodon">
+            <img src="./resources/img/mastodon-white-text.svg" alt="Mastodon logo">
+            <p class="mastodon-caption caption">@ninja_5000@mastodon.social</p>
+          </a>
+        </div>
+      </section>
 
-        <a href="https://discord.com/oauth2/authorize?client_id=1270309745265475614" target="_blank" class="fade-in col span-1-of-2 social-panel website">
-          <img src="./resources/img/aviac-pfp.webp" alt="AVIAC's pfp">
-          <h3>A.V.I.A.C.</h3>
-          <p class="caption">A nonsensical AI chatbot using Markov Chains<br>and advanced NLP strategies</p>
-        </a>
-      </div>
-    </section>
+      <section class="friends box">
+        <div class="fade-in row">
+          <h2 class="fade-in">Friends</h2>
+        </div>
+        <div class="fade-in row">
+          <a href="https://stefdp.is-a.dev/" target="_blank" class="fade-in col span-1-of-4 social-panel website">
+            <ion-icon name="globe-outline"></ion-icon>
+            <h3>Stef</h3>
+            <p class="caption">Kilometer per Second</p>
+          </a>
+          <a href="https://user0.is-a.dev/" target="_blank" class="fade-in col span-1-of-4 social-panel website user0">
+            <ion-icon name="globe-outline"></ion-icon>
+            <h3>user0</h3>
+            <p class="caption">cnout poc</p>
+          </a>
+          <a href="https://eryquicc.is-a.dev/" target="_blank" class="fade-in col span-1-of-4 social-panel website eryquicc">
+            <ion-icon name="globe-outline"></ion-icon>
+            <h3>Eryquicc</h3>
+            <p class="caption">BLAKMAN doorman</p>
+          </a>
+          <a href="https://creeperita104.is-a.dev/" target="_blank" class="fade-in col span-1-of-4 social-panel website creeperita104">
+            <ion-icon name="globe-outline"></ion-icon>
+            <h3>CreeperITA104</h3>
+            <p class="caption">Idiota Professionale</p>
+          </a>
+        </div>
+      </section>
 
-    <footer>
-      <p class="caption">&copy; 2024 ninja_5000</p>
-    </footer>
+      <section class="projects box">
+        <div class="fade-in row">
+          <h2 class="fade-in">Showcase</h2>
+        </div>
+        <div class="fade-in row">
+          <a href="#" class="fade-in col span-1-of-2 social-panel website">
+            <ion-icon name="globe-outline"></ion-icon>
+            <h3>My Web Profile</h3>
+            <p class="caption">What you're seeing right now</p>
+          </a>
+
+          <a href="https://discord.com/oauth2/authorize?client_id=946021874339565598" target="_blank" class="fade-in col span-1-of-2 social-panel website">
+            <img src="./resources/img/joshua-pfp.webp" alt="Joshua's pfp">
+            <h3>Joshua from TWEWY</h3>
+            <p class="caption">(2022) A weak AI, fine-tuned on<br>Microsoft's DialoGPT-medium</p>
+          </a>
+        </div>
+
+        <div class="fade-in row">
+          <a href="https://discord.com/oauth2/authorize?client_id=975365560298795008" target="_blank" class="fade-in col span-1-of-2 social-panel website">
+            <img src="./resources/img/nav-pfp.webp" alt="NAVIAC's pfp">
+            <h3>N.A.V.I.A.C.</h3>
+            <p class="caption">A sophisticated Discord AI chatbot,<br>with a strong, witty personality</p>
+          </a>
+
+          <a href="https://discord.com/oauth2/authorize?client_id=1270309745265475614" target="_blank" class="fade-in col span-1-of-2 social-panel website">
+            <img src="./resources/img/aviac-pfp.webp" alt="AVIAC's pfp">
+            <h3>A.V.I.A.C.</h3>
+            <p class="caption">A nonsensical AI chatbot using Markov Chains<br>and advanced NLP strategies</p>
+          </a>
+        </div>
+      </section>
+
+      <footer>
+        <p class="caption">&copy; 2025 ninja_5000</p>
+      </footer>
+    </main>
 
     <script src="./resources/js/script.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
