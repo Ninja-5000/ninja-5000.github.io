@@ -1,0 +1,369 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f4f4f4;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.navbar {
+  background-color: #00b894;
+  color: #fff;
+  padding: 1rem 0;
+  border-radius: 0 0 10px 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.logo img {
+  width: 75px;
+  height: 75px;
+  margin: 10px 10px -15px 0;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 20px;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #f0f0f0;
+}
+
+.coins {
+  font-weight: bold;
+}
+
+#homeLink,
+#profileLink,
+#logoutLink,
+.coins {
+  visibility: hidden;
+}
+
+.page {
+  display: none;
+  padding: 2rem 0;
+}
+
+.page.active {
+  display: block;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+h2 {
+  margin-bottom: 1rem;
+}
+
+/* Login/Signup Page */
+.auth-form {
+  max-width: 400px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.auth-form input {
+  display: block;
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  transition: border-color 0.3s ease;
+}
+
+.auth-form input:focus {
+  border-color: #00b894;
+  outline: none;
+}
+
+.auth-form button {
+  display: block;
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #00b894;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.auth-form button:hover {
+  background-color: #02aa89;
+}
+
+/* Prompt Page */
+.prompt-box {
+  background-color: #fff;
+  padding: 1.5rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.prompt-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15);
+}
+
+.prompt-box textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  resize: vertical;
+  transition: border-color 0.3s ease;
+}
+
+.prompt-box textarea:focus {
+  border-color: #00b894;
+  outline: none;
+}
+
+.prompt-box button {
+  display: block;
+  width: 100%;
+  padding: 0.75rem;
+  margin-top: 1rem;
+  background-color: #00b894;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.prompt-box button:hover {
+  background-color: #02aa89;
+}
+
+.examples {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.example {
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.example:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* New styles for loading page */
+.loading-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 80vh;
+}
+
+.loading-image {
+  width: 150px;
+  height: 150px;
+  transition: all 1s ease;
+}
+
+.loading-container {
+  margin-top: 40px;
+  font-size: 1.3rem;
+  text-align: center;
+  max-width: 30ch;
+  word-wrap: break-word;
+}
+
+/* Boxes Page */
+.boxes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.box {
+  background-color: #fff;
+  padding: 1.5rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15);
+}
+
+.box.locked {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.box.locked:hover {
+  transform: none;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.box.locked::after {
+  /* content: "\f023"; */
+  content: "🔒";
+  font-weight: 900;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2rem;
+}
+
+/* Content Page */
+.content-box {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+}
+
+.question-panel {
+  background-color: #f9f9f9;
+  padding: 1.5rem;
+  border-radius: 15px;
+  margin-bottom: 2rem;
+}
+
+.question-panel textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  resize: vertical;
+  transition: border-color 0.3s ease;
+}
+
+.question-panel textarea:focus {
+  border-color: #00b894;
+  outline: none;
+}
+
+.question-panel button {
+  display: block;
+  width: 100%;
+  padding: 0.75rem;
+  margin-top: 1rem;
+  background-color: #00b894;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.question-panel button:hover {
+  background-color: #02aa89;
+}
+
+.complete-button {
+  display: block;
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.complete-button:hover {
+  background-color: #45a049;
+}
+
+.chat-container {
+  height: 300px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.chat-message {
+  margin-bottom: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  max-width: 80%;
+}
+
+.user-message {
+  background-color: #4a90e2;
+  color: white;
+  align-self: flex-end;
+  margin-left: auto;
+}
+
+.ai-message {
+  background-color: #f0f0f0;
+  color: #333;
+}
+
+.chat-input {
+  display: flex;
+}
+
+.chat-input textarea {
+  flex-grow: 1;
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 10px 0 0 10px;
+  resize: none;
+}
+
+.chat-input button {
+  padding: 0.5rem 1rem;
+  background-color: #4a90e2;
+  color: white;
+  border: none;
+  border-radius: 0 10px 10px 0;
+  cursor: pointer;
+}
