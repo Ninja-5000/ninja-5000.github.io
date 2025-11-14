@@ -8,6 +8,12 @@ importers:
 
   .:
     dependencies:
+      framer-motion:
+        specifier: ^12.23.24
+        version: 12.23.24(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
+      lucide-react:
+        specifier: ^0.552.0
+        version: 0.552.0(react@19.2.0)
       next:
         specifier: 16.0.1
         version: 16.0.1(@babel/core@7.28.5)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
@@ -17,6 +23,9 @@ importers:
       react-dom:
         specifier: 19.2.0
         version: 19.2.0(react@19.2.0)
+      typeit-react:
+        specifier: ^2.7.8
+        version: 2.7.8(@types/react@19.2.2)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
     devDependencies:
       '@tailwindcss/postcss':
         specifier: ^4
@@ -510,6 +519,9 @@ packages:
 
   '@types/react@19.2.2':
     resolution: {integrity: sha512-6mDvHUFSjyT2B2yeNx2nUgMxh9LtOWvkhIU3uePn2I2oyNymUAX1NIsdgviM4CH+JSrp2D2hsMvJOkxY+0wNRA==}
+
+  '@types/web-animations-js@2.2.16':
+    resolution: {integrity: sha512-ATELeWMFwj8eQiH0KmvsCl1V2lu/qx/CjOBmv4ADSZS5u8r4reMyjCXtxG7khqyiwH3IOMNdrON/Ugn94OUcRA==}
 
   '@typescript-eslint/eslint-plugin@8.46.2':
     resolution: {integrity: sha512-ZGBMToy857/NIPaaCucIUQgqueOiq7HeAKkhlvqVV4lm089zUFW6ikRySx2v+cAhKeUCPuWVHeimyk6Dw1iY3w==}
@@ -1081,6 +1093,20 @@ packages:
     resolution: {integrity: sha512-dKx12eRCVIzqCxFGplyFKJMPvLEWgmNtUrpTiJIR5u97zEhRG8ySrtboPHZXx7daLxQVrl643cTzbab2tkQjxg==}
     engines: {node: '>= 0.4'}
 
+  framer-motion@12.23.24:
+    resolution: {integrity: sha512-HMi5HRoRCTou+3fb3h9oTLyJGBxHfW+HnNE25tAXOvVx/IvwMHK0cx7IR4a2ZU6sh3IX1Z+4ts32PcYBOqka8w==}
+    peerDependencies:
+      '@emotion/is-prop-valid': '*'
+      react: ^18.0.0 || ^19.0.0
+      react-dom: ^18.0.0 || ^19.0.0
+    peerDependenciesMeta:
+      '@emotion/is-prop-valid':
+        optional: true
+      react:
+        optional: true
+      react-dom:
+        optional: true
+
   function-bind@1.1.2:
     resolution: {integrity: sha512-7XHNxH7qX9xG5mIwxkhumTox/MIRNcOgDrxWsMt2pAr23WHp6MrRlN7FBSFpCpr+oVO0F744iUgR82nJMfG2SA==}
 
@@ -1446,6 +1472,11 @@ packages:
   lru-cache@5.1.1:
     resolution: {integrity: sha512-KpNARQA3Iwv+jTA0utUVVbrh+Jlrr1Fv0e56GGzAFOXN7dk/FviaDW8LHmK52DlcH4WP2n6gI8vN1aesBFgo9w==}
 
+  lucide-react@0.552.0:
+    resolution: {integrity: sha512-g9WCjmfwqbexSnZE+2cl21PCfXOcqnGeWeMTNAOGEfpPbm/ZF4YIq77Z8qWrxbu660EKuLB4nSLggoKnCb+isw==}
+    peerDependencies:
+      react: ^16.5.1 || ^17.0.0 || ^18.0.0 || ^19.0.0
+
   magic-string@0.30.21:
     resolution: {integrity: sha512-vd2F4YUyEXKGcLHoq+TEyCjxueSeHnFxyyjNp80yg0XV4vUhnDer/lvvlqM/arB5bXQN5K2/3oinyCRyx8T2CQ==}
 
@@ -1470,6 +1501,12 @@ packages:
 
   minimist@1.2.8:
     resolution: {integrity: sha512-2yyAR8qBkN3YuheJanUpWC5U3bb5osDywNB8RzDVlDwDHbocAJveqqj1u8+SVD7jkWT4yvsHCpWqqWqAxb0zCA==}
+
+  motion-dom@12.23.23:
+    resolution: {integrity: sha512-n5yolOs0TQQBRUFImrRfs/+6X4p3Q4n1dUEqt/H58Vx7OW6RF+foWEgmTVDhIWJIMXOuNNL0apKH2S16en9eiA==}
+
+  motion-utils@12.23.6:
+    resolution: {integrity: sha512-eAWoPgr4eFEOFfg2WjIsMoqJTW6Z8MTUCgn/GZ3VRpClWBdnbjryiA3ZSNLyxCTmCQx4RmYX6jX1iWHbenUPNQ==}
 
   ms@2.1.3:
     resolution: {integrity: sha512-6FlzubTLZG3J2a/NVCAleEhjzq5oxgHyaCU9yYXvcLsvoVaHJq/s5xXI6/XXP6tz7R9xAOtHnSO/tXtF3WRTlA==}
@@ -1827,6 +1864,15 @@ packages:
   typed-array-length@1.0.7:
     resolution: {integrity: sha512-3KS2b+kL7fsuk/eJZ7EQdnEmQoaho/r6KUef7hxvltNA5DR8NAUM+8wJMbJyZ4G9/7i3v5zPBIMN5aybAh2/Jg==}
     engines: {node: '>= 0.4'}
+
+  typeit-react@2.7.8:
+    resolution: {integrity: sha512-zN2Riiv63pmJEVqXOy1yXraF6hz1zr4L17pw1f9h4zQQDwP8YGBL+hcH9/75VOocjc7ZAg3hYUW1etZlZe4OfQ==}
+    peerDependencies:
+      react: ^19.0.0
+      react-dom: ^19.0.0
+
+  typeit@8.8.7:
+    resolution: {integrity: sha512-sSVpy+cjeFP6Z+fZqiHzUSShg5yYFeJEt/Qut/bX945+Axyq+Yq+GPOuuk+sofoccSv8nNX/ibOOHkbki2mEpg==}
 
   typescript-eslint@8.46.2:
     resolution: {integrity: sha512-vbw8bOmiuYNdzzV3lsiWv6sRwjyuKJMQqWulBOU7M0RrxedXledX8G8kBbQeiOYDnTfiXz0Y4081E1QMNB6iQg==}
@@ -2333,6 +2379,8 @@ snapshots:
   '@types/react@19.2.2':
     dependencies:
       csstype: 3.1.3
+
+  '@types/web-animations-js@2.2.16': {}
 
   '@typescript-eslint/eslint-plugin@8.46.2(@typescript-eslint/parser@8.46.2(eslint@9.39.0(jiti@2.6.1))(typescript@5.9.3))(eslint@9.39.0(jiti@2.6.1))(typescript@5.9.3)':
     dependencies:
@@ -3082,6 +3130,15 @@ snapshots:
     dependencies:
       is-callable: 1.2.7
 
+  framer-motion@12.23.24(react-dom@19.2.0(react@19.2.0))(react@19.2.0):
+    dependencies:
+      motion-dom: 12.23.23
+      motion-utils: 12.23.6
+      tslib: 2.8.1
+    optionalDependencies:
+      react: 19.2.0
+      react-dom: 19.2.0(react@19.2.0)
+
   function-bind@1.1.2: {}
 
   function.prototype.name@1.1.8:
@@ -3427,6 +3484,10 @@ snapshots:
     dependencies:
       yallist: 3.1.1
 
+  lucide-react@0.552.0(react@19.2.0):
+    dependencies:
+      react: 19.2.0
+
   magic-string@0.30.21:
     dependencies:
       '@jridgewell/sourcemap-codec': 1.5.5
@@ -3449,6 +3510,12 @@ snapshots:
       brace-expansion: 2.0.2
 
   minimist@1.2.8: {}
+
+  motion-dom@12.23.23:
+    dependencies:
+      motion-utils: 12.23.6
+
+  motion-utils@12.23.6: {}
 
   ms@2.1.3: {}
 
@@ -3890,6 +3957,19 @@ snapshots:
       is-typed-array: 1.1.15
       possible-typed-array-names: 1.1.0
       reflect.getprototypeof: 1.0.10
+
+  typeit-react@2.7.8(@types/react@19.2.2)(react-dom@19.2.0(react@19.2.0))(react@19.2.0):
+    dependencies:
+      '@types/react-dom': 19.2.2(@types/react@19.2.2)
+      react: 19.2.0
+      react-dom: 19.2.0(react@19.2.0)
+      typeit: 8.8.7
+    transitivePeerDependencies:
+      - '@types/react'
+
+  typeit@8.8.7:
+    dependencies:
+      '@types/web-animations-js': 2.2.16
 
   typescript-eslint@8.46.2(eslint@9.39.0(jiti@2.6.1))(typescript@5.9.3):
     dependencies:
