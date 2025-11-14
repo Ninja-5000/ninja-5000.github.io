@@ -1,26 +1,54 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@layer base {
+  * {
+    @apply m-0 p-0 box-border;
+  }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  html {
+    @apply scroll-smooth;
+  }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  body {
+    @apply bg-[#0a0a0a] text-gray-100 overflow-x-hidden;
+    font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI",
+      sans-serif;
+  }
+
+  /* Hide scrollbar but keep functionality */
+  ::-webkit-scrollbar {
+    @apply w-2;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-[#0a0a0a];
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-gray-400/30 rounded-full;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-gray-400/50;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@layer utilities {
+  .glass {
+    @apply bg-white/5 backdrop-blur-xl border border-white/10;
+  }
+
+  .glass-hover {
+    @apply transition-all duration-300 hover:bg-white/10 hover:border-white/20;
+  }
+
+  .text-glow {
+    /* text-shadow: 0 0 20px */
+    @apply text-shadow-[0_0_20px] text-shadow-gray-600;
+  }
+
+  .circle.grow {
+    width: 32px;
+    height: 32px;
+  }
 }
