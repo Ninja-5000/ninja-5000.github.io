@@ -11,28 +11,28 @@ const socials = [
     handle: "ninja_5000#0",
     url: "http://discord.gg/u7dqJf88SX",
     color: "from-indigo-600 to-blue-600",
-    icon: <img src="./images/discord-mark-white.svg" alt="Discord logo" />,
+    icon: <img src="/images/discord-mark-white.svg" alt="Discord logo" />,
   },
   {
     name: "GitHub",
     handle: "Ninja-5000",
     url: "https://github.com/Ninja-5000",
     color: "from-gray-700 to-gray-900",
-    icon: <img src="./images/github-mark-white.svg" alt="GitHub logo" />,
+    icon: <img src="/images/github-mark-white.svg" alt="GitHub logo" />,
   },
   {
     name: "X (Twitter)",
     handle: "@CarmeloCan745",
     url: "https://twitter.com/CarmeloCan745",
     color: "from-black to-gray-800",
-    icon: <img src="./images/x-logo.svg" className="h-30" alt="X logo" />,
+    icon: <img src="/images/x-logo.svg" className="h-30" alt="X logo" />,
   },
   {
     name: "Mastodon",
     handle: "@ninja_5000@mastodon.social",
     url: "https://mastodon.social/@ninja_5000",
     color: "from-purple-900 to-indigo-900",
-    icon: <img src="./images/mastodon-white-text.svg" alt="Mastodon logo" />,
+    icon: <img src="/images/mastodon-white-text.svg" alt="Mastodon logo" />,
   },
 ];
 
