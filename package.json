@@ -10,7 +10,7 @@
     "predeploy": "pnpm run build",
     "deploy": "gh-pages -d out"
   },
-  "homepage": "https://ninja-5000.github.io/",
+  "homepage": "https://ninja-5000.github.io",
   "dependencies": {
     "framer-motion": "^12.23.24",
     "lucide-react": "^0.552.0",
