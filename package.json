@@ -6,8 +6,11 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "predeploy": "pnpm run build",
+    "deploy": "gh-pages -d out"
   },
+  "homepage": "https://ninja-5000.github.io/",
   "dependencies": {
     "framer-motion": "^12.23.24",
     "lucide-react": "^0.552.0",
@@ -23,6 +26,7 @@
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "16.0.1",
+    "gh-pages": "^6.3.0",
     "tailwindcss": "^4",
     "typescript": "^5"
   }
