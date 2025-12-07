@@ -1,6 +1,6 @@
 {
   "name": "carmelo-web-portfolio",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -14,9 +14,9 @@
   "dependencies": {
     "framer-motion": "^12.23.24",
     "lucide-react": "^0.552.0",
-    "next": "16.0.1",
-    "react": "19.2.0",
-    "react-dom": "19.2.0",
+    "next": "16.0.7",
+    "react": "19.2.1",
+    "react-dom": "19.2.1",
     "typeit-react": "^2.7.8"
   },
   "devDependencies": {
