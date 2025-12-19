@@ -26,6 +26,18 @@ export default function Header() {
     <header className="relative h-screen w-full flex flex-col items-center justify-center px-4 overflow-hidden">
       {/* Background gradient */}
       <div className="absolute inset-0 bg-linear-to-b from-blue-900/20 via-transparent to-transparent" />
+      <div className="absolute inset-0 overflow-hidden">
+        {/* Static Grid Pattern */}
+        <div
+          className="absolute inset-0 opacity-[0.03]"
+          style={{
+            backgroundImage:
+              "linear-gradient(#fff 1px, transparent 1px), linear-gradient(90deg, #fff 1px, transparent 1px)",
+            backgroundSize: "40px 40px",
+          }}
+        />
+        <div className="absolute inset-0 bg-linear-to-t from-[#0a0a0a] via-transparent to-[#0a0a0a]/50" />
+      </div>
 
       <motion.div
         initial={{ opacity: 0, scale: 0.8 }}
@@ -97,8 +109,7 @@ export default function Header() {
                   )
                   .type(
                     "<br/>Check out my socials and some of my projects below."
-                  )
-                  .type("<br/>Let's chat on Discord: ninja_5000");
+                  );
                 return instance;
               }}
             />

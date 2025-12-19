@@ -68,7 +68,7 @@ export default function Socials() {
       className="min-h-screen py-20 px-4 md:px-8 lg:px-16 relative"
     >
       {/* Background gradient */}
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-blue-900/5 to-transparent" />
+      <div className="absolute inset-0 bg-linear-to-b from-transparent via-blue-900/5 to-transparent" />
 
       <motion.div
         variants={containerVariants}
