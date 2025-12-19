@@ -29,7 +29,7 @@ export default function Header() {
       <div className="absolute inset-0 overflow-hidden">
         {/* Static Grid Pattern */}
         <div
-          className="absolute inset-0 opacity-[0.03]"
+          className="absolute inset-0 opacity-[0.065]"
           style={{
             backgroundImage:
               "linear-gradient(#fff 1px, transparent 1px), linear-gradient(90deg, #fff 1px, transparent 1px)",

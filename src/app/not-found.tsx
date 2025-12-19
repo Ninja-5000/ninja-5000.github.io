@@ -157,10 +157,10 @@ export default function NotFound() {
           className="relative z-10 text-center max-w-3xl mx-auto"
         >
           <div className="mb-6">
-            <h1 className="select-none text-[160px] md:text-[260px] leading-[0.8] font-extrabold bg-clip-text text-transparent bg-linear-to-b from-black to-blue-600 drop-shadow-[0_0_30px_rgba(99,102,241,0.12)] animate-blink">
+            <h1 className="select-none text-[160px] md:text-[260px] leading-[0.8] font-extrabold bg-clip-text text-transparent bg-linear-to-b from-black to-blue-600 drop-shadow-[0_0_30px_rgba(99,102,241,0.12)]">
               <span>4</span>
               <span
-                className="mx-6 relative hover:border-transparent hover:border-20 transition-all cursor-pointer"
+                className="mx-6 hover:border-transparent hover:border-20 transition-all cursor-pointer"
                 onClick={() => setShowMiniGame(true)}
               >
                 0
